@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ativ.css">
+</head>
+<body>
+<form id="formulario" onsubmit="return mostrarConfirmacao()">
+<div class="grid"> 
+     <div>
+        Nome : <input type="text" placeholder="Digite seu nome" id="nome" maxlength="20">
+     </div>
+     <div>
+        Endereço : <input type="text" placeholder="Digite seu endereço" id="endereco" maxlength="40">
+     </div>
+    <div>
+        telefone : +55 <input type="tel" placeholder="(31) 9 9999-9999" id="telefone" oninput=mascara_telefone() maxlength="16">
+    </div>
+    <div>
+        CPF : <input type="text" placeholder="Digite seu CPF" id="cpf" oninput=mascara_cpf() maxlength="14">
+    </div>
+    <div>
+        CNPJ : <input type="tel" placeholder="Digite seu CNPJ" id="cnpj" oninput=mascara_cnpj() maxlength="18">
+    </div>
+    <div>
+        <label>CEP : </label>
+        <input type="text" id="cep" oninput=mascara_cep() maxlength="10" placeholder="Digite seu CEP">
+    </div>
+    <div>
+        <button type="submit">Enviar</button>
+    </div>
+</div>
+</form>
+
+<div id="mensagem">
+    Formulário enviado com sucesso!
+</div>
+
+<script src="java.js"></script>
+</body>
+</html>
